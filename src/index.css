@@ -3,7 +3,35 @@
 @tailwind utilities;
 
 @layer components {
-    .mycontainer {
-         @apply container px-40 py-16 mx-auto;
-    }
+  /* Main container with dark theme & glass effect */
+  .mycontainer {
+    @apply container mx-auto px-4 md:px-10 lg:px-20 xl:px-40 py-8 md:py-12 lg:py-16 
+           bg-gradient-to-br from-gray-900 to-black text-white 
+           shadow-[0px_0px_25px_rgba(0,255,150,0.5)] rounded-xl border border-gray-700 
+           backdrop-blur-lg bg-opacity-90 transition-all duration-500;
+  }
+
+  /* Input fields with futuristic borders */
+  .custom-input {
+    @apply bg-gray-800 text-white placeholder-gray-400 px-4 py-2 rounded-lg border border-gray-600 
+           focus:border-green-500 focus:ring-2 focus:ring-green-500 transition-all duration-300;
+  }
+
+  /* Neon glowing button */
+  .neon-button {
+    @apply w-full bg-green-500 hover:bg-green-600 font-semibold py-2 rounded-lg text-white 
+           shadow-[0px_0px_10px_rgba(0,255,150,0.6)] transition-all duration-300 
+           hover:shadow-[0px_0px_20px_rgba(0,255,150,0.9)];
+  }
+
+  /* Card style with a subtle glow */
+  .custom-card {
+    @apply bg-gray-800 text-white rounded-lg shadow-md border border-gray-700 
+           hover:shadow-[0px_0px_15px_rgba(0,255,150,0.4)] transition-all duration-300;
+  }
+
+  /* Clipboard icon animation */
+  .clipboard-icon {
+    @apply cursor-pointer transition transform hover:scale-110 hover:text-green-400;
+  }
 }
