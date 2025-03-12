@@ -1,20 +1,27 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div className='bg-slate-800  flax flex-col justify-center items-center text-white fixed bottom-0 w-full'>
-         <div className="logo font-bold text-white text-2xl">
-          <span className='text-green-600'>&lt;</span>
-          Pass
-          <span className='text-green-600'>OP/&gt;</span>
-        </div>
-        <div classname="flex justify-center items-center">
-        Created by <img className='w-7 mx-2  ' src="heart.png" alt="" /> by Divyanshu
-            <p>© 2021 Password Manager. All rights reserved.</p>
-        </div>
-        
-    </div>
-  )
-}
+    <footer className="bg-gray-900 text-white py-6 flex flex-col items-center w-full shadow-lg border-t border-gray-700">
+      {/* Logo */}
+      <div className="font-extrabold text-2xl flex items-center gap-2 tracking-wide">
+        <span className="text-green-500 drop-shadow-md">&lt;</span>
+        Pass<span className="text-green-500 drop-shadow-md">OP/&gt;</span>
+      </div>
 
-export default Footer
+      {/* Creator Info */}
+      <div className="flex items-center gap-2 mt-2 text-sm text-gray-400">
+        <span>Created with</span>
+        <span className="text-red-500 animate-pulse">❤️</span>
+        <span>by Divyanshu</span>
+      </div>
+
+      {/* Copyright */}
+      <p className="text-xs text-gray-500 mt-2">
+        © {new Date().getFullYear()} Password Manager. All rights reserved.
+      </p>
+    </footer>
+  );
+};
+
+export default Footer;
